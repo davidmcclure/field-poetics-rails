@@ -9,6 +9,8 @@
 #  updated_at         :datetime
 #  encrypted_password :string(255)
 #  is_superadmin      :boolean(1)      default(FALSE)
+#  firstname          :string(255)
+#  lastname           :string(255)
 #
 
 require 'spec_helper'
@@ -20,7 +22,9 @@ describe Administrator do
       :username => "davidmcclure",
       :email => "david.mcclure@virginia.edu",
       :password => "poesypure",
-      :password_confirmation => "poesypure"
+      :password_confirmation => "poesypure",
+      :firstname => 'David',
+      :lastname => 'McClure'
     }
   end
 
@@ -28,7 +32,7 @@ describe Administrator do
     Administrator.create!(@attributes)
   end
 
-  it "should require a name" do
+  it "should require a username" do
     no_username_admin = Administrator.new(@attributes.merge(:username => ''))
     no_username_admin.should_not be_valid
   end
@@ -38,10 +42,32 @@ describe Administrator do
     no_email_admin.should_not be_valid
   end
 
+  it "should require a first name" do
+    no_firstname_admin = Administrator.new(@attributes.merge(:firstname => ''))
+    no_firstname_admin.should_not be_valid
+  end
+
+  it "should require a last name" do
+    no_lastname_admin = Administrator.new(@attributes.merge(:lastname => ''))
+    no_lastname_admin.should_not be_valid
+  end
+
   it "should reject usernames that are too long" do
     long_username = "a" * 51
     long_username_admin = Administrator.new(@attributes.merge(:username => long_username))
     long_username_admin.should_not be_valid
+  end
+
+  it "should reject first names that are too long" do
+    long_firstname = "a" * 51
+    long_firstname_admin = Administrator.new(@attributes.merge(:firstname => long_firstname))
+    long_firstname_admin.should_not be_valid
+  end
+
+  it "should reject last names that are too long" do
+    long_lastname = "a" * 51
+    long_lastname_admin = Administrator.new(@attributes.merge(:lastname => long_lastname))
+    long_lastname_admin.should_not be_valid
   end
 
   it "should accept valid email addresses" do

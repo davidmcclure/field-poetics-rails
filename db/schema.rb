@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110817144012) do
+ActiveRecord::Schema.define(:version => 20110817154221) do
 
   create_table "administrators", :force => true do |t|
     t.string   "username"
@@ -19,6 +19,8 @@ ActiveRecord::Schema.define(:version => 20110817144012) do
     t.datetime "updated_at"
     t.string   "encrypted_password"
     t.boolean  "is_superadmin",      :default => false
+    t.string   "firstname"
+    t.string   "lastname"
   end
 
   add_index "administrators", ["username"], :name => "index_administrators_on_username", :unique => true

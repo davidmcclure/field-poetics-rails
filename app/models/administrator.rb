@@ -9,13 +9,21 @@
 #  updated_at         :datetime
 #  encrypted_password :string(255)
 #  is_superadmin      :boolean(1)      default(FALSE)
+#  firstname          :string(255)
+#  lastname           :string(255)
 #
 
 class Administrator < ActiveRecord::Base
 
   # Accessors.
   attr_accessor :password
-  attr_accessible :username, :email, :is_superadmin, :password, :password_confirmation
+  attr_accessible :username,
+    :email,
+    :is_superadmin,
+    :password,
+    :password_confirmation,
+    :firstname,
+    :lastname
 
   # Regex for email validation.
   email_regex = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
@@ -34,6 +42,14 @@ class Administrator < ActiveRecord::Base
     :presence => true,
     :confirmation => true,
     :length => { :within => 6..40 }
+
+  validates :firstname,
+    :presence => true,
+    :length => { :maximum => 50 }
+
+  validates :lastname,
+    :presence => true,
+    :length => { :maximum => 50 }
 
   # Callbacks.
   before_save :encrypt_password
