@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110817125005) do
+ActiveRecord::Schema.define(:version => 20110817134711) do
 
   create_table "administrators", :force => true do |t|
     t.string   "username"
@@ -18,5 +18,7 @@ ActiveRecord::Schema.define(:version => 20110817125005) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "administrators", ["username"], :name => "index_administrators_on_username", :unique => true
 
 end
