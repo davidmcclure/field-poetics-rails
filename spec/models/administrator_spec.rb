@@ -12,5 +12,23 @@
 require 'spec_helper'
 
 describe Administrator do
-  pending "add some examples to (or delete) #{__FILE__}"
+
+  before(:each) do
+    @attributes = { :username => 'davidmcclure', :email => 'david.mcclure@virginia.edu' }
+  end
+
+  it "should create a new administrator given valid attributes" do
+    Administrator.create!(@attributes)
+  end
+
+  it "should require a name" do
+    no_username_admin = Administrator.new(@attributes.merge(:username => ''))
+    no_username_admin.should_not be_valid
+  end
+
+  it "should require an email address" do
+    no_email_admin = Administrator.new(@attributes.merge(:email => ''))
+    no_email_admin.should_not be_valid
+  end
+
 end
