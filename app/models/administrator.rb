@@ -8,7 +8,7 @@
 #  created_at         :datetime
 #  updated_at         :datetime
 #  encrypted_password :string(255)
-#  is_superadmin      :boolean(1)
+#  is_superadmin      :boolean(1)      default(FALSE)
 #
 
 class Administrator < ActiveRecord::Base

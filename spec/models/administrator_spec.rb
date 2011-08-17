@@ -8,7 +8,7 @@
 #  created_at         :datetime
 #  updated_at         :datetime
 #  encrypted_password :string(255)
-#  is_superadmin      :boolean(1)
+#  is_superadmin      :boolean(1)      default(FALSE)
 #
 
 require 'spec_helper'
@@ -112,7 +112,14 @@ describe Administrator do
   describe "superadmin status" do
 
     before(:each) do
+      @administrator = Administrator.create!(@attributes)
     end
+
+    it "should have an is_superadmin attribute"
+
+    it "should require is_superadmin"
+
+    it "should default is_superadmin to false"
 
   end
 
