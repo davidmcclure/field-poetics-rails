@@ -2,18 +2,20 @@
 #
 # Table name: administrators
 #
-#  id         :integer(4)      not null, primary key
-#  username   :string(255)
-#  email      :string(255)
-#  created_at :datetime
-#  updated_at :datetime
+#  id                 :integer(4)      not null, primary key
+#  username           :string(255)
+#  email              :string(255)
+#  created_at         :datetime
+#  updated_at         :datetime
+#  encrypted_password :string(255)
+#  is_superadmin      :boolean(1)
 #
 
 class Administrator < ActiveRecord::Base
 
   # Accessors.
   attr_accessor :password
-  attr_accessible :username, :email, :password, :password_confirmation
+  attr_accessible :username, :email, :is_superadmin, :password, :password_confirmation
 
   # Regex for email validation.
   email_regex = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i

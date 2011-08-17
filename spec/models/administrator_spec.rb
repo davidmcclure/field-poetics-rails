@@ -2,11 +2,13 @@
 #
 # Table name: administrators
 #
-#  id         :integer(4)      not null, primary key
-#  username   :string(255)
-#  email      :string(255)
-#  created_at :datetime
-#  updated_at :datetime
+#  id                 :integer(4)      not null, primary key
+#  username           :string(255)
+#  email              :string(255)
+#  created_at         :datetime
+#  updated_at         :datetime
+#  encrypted_password :string(255)
+#  is_superadmin      :boolean(1)
 #
 
 require 'spec_helper'
@@ -18,7 +20,8 @@ describe Administrator do
       :username => "davidmcclure",
       :email => "david.mcclure@virginia.edu",
       :password => "poesypure",
-      :password_confirmation => "poesypure"
+      :password_confirmation => "poesypure",
+      :is_superadmin => false
     }
   end
 
@@ -102,6 +105,13 @@ describe Administrator do
 
     it "should set the encrypted password" do
       @administrator.encrypted_password.should_not be_blank
+    end
+
+  end
+
+  describe "superadmin status" do
+
+    before(:each) do
     end
 
   end
