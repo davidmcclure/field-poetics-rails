@@ -20,8 +20,7 @@ describe Administrator do
       :username => "davidmcclure",
       :email => "david.mcclure@virginia.edu",
       :password => "poesypure",
-      :password_confirmation => "poesypure",
-      :is_superadmin => false
+      :password_confirmation => "poesypure"
     }
   end
 
@@ -109,17 +108,25 @@ describe Administrator do
 
   end
 
-  describe "superadmin status" do
+  describe "is_superadmin status" do
 
-    before(:each) do
-      @administrator = Administrator.create!(@attributes)
+    it "should have a is_superadmin attribute" do
+      Administrator.create!(@attributes).should respond_to(:is_superadmin)
     end
 
-    it "should have an is_superadmin attribute"
+    it "should accept attributes when is_superadmin is set to true" do
+      Administrator.new(@attributes.merge(:is_superadmin => true)).should be_valid
+    end
 
-    it "should require is_superadmin"
+    it "should create a non-superadmin admin by default" do
+      @administrator = Administrator.create!(@attributes)
+      @administrator.is_superadmin.should equal(false)
+    end
 
-    it "should default is_superadmin to false"
+    it "should create a superadmin when is_superadmin is set to true" do
+      @administrator = Administrator.create!(@attributes.merge(:is_superadmin => true))
+      @administrator.is_superadmin.should equal(true)
+    end
 
   end
 
