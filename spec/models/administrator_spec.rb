@@ -132,6 +132,37 @@ describe Administrator do
       @administrator.encrypted_password.should_not be_blank
     end
 
+    describe "password_matches? method" do
+
+      it "should retrun true if the passwords match" do
+        @administrator.password_matches?(@attributes[:password]).should be_true
+      end
+
+      it "should return false if the passwords do not match" do
+        @administrator.password_matches?('poesyimpure').should_not be_true
+      end
+
+    end
+
+    describe "authentication method" do
+
+      it "should return nil for username/password mismatch" do
+        wrong_password_admin = Administrator.authenticate(@attributes[:username], "poesyimpure")
+        wrong_password_admin.should be_nil
+      end
+
+      it "should return nil for a non-existent username" do
+        nonexistent_admin = Administrator.authenticate("nonexistentuser", "poesyimpure")
+        nonexistent_admin.should be_nil
+      end
+
+      it "should return the administrator for username/password match" do
+        matching_admin = Administrator.authenticate(@attributes[:username], @attributes[:password])
+        matching_admin.should == @administrator
+      end
+
+    end
+
   end
 
   describe "is_superadmin status" do

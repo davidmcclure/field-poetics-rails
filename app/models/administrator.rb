@@ -54,15 +54,44 @@ class Administrator < ActiveRecord::Base
   # Callbacks.
   before_save :encrypt_password
 
+  # ** Table methods. ** #
+
+  # Try to log in a username/passsword combination.
+  def self.authenticate(username, submitted_password)
+    administrator = find_by_username(username)
+    if administrator.nil?
+      return nil
+    else
+      if administrator.password_matches?(submitted_password)
+        return administrator
+      end
+    end
+  end
+
+  # ** Row methods. ** #
+
+  # Check to see if the admin's password matches the submitted password.
+  def password_matches?(submitted_password)
+    encrypt(submitted_password) == encrypted_password
+  end
 
   private
 
     def encrypt_password
+      self.salt = make_salt if new_record?
       self.encrypted_password = encrypt(self.password)
     end
 
     def encrypt(string)
-      string
+      secure_hash("#{salt}--#{string}")
+    end
+
+    def make_salt
+      secure_hash("#{Time.now.utc}--#{password}")
+    end
+
+    def secure_hash(string)
+      Digest::SHA2.hexdigest(string)
     end
 
 end
