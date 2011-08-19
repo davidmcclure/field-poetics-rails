@@ -12,6 +12,6 @@ will have the authority to create login credentials for other researchers and co
     <%= form.input :lastname, :label => "Last Name", :required => true %>
   <% end %>
   <%= form.buttons do %>
-    <%= form.commit_button %>
+    <%= form.commit_button :button_html => { :value => "Continue" } %>
   <% end %>
 <% end %>

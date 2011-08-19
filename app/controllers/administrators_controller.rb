@@ -5,4 +5,14 @@ class AdministratorsController < ApplicationController
     @title = "Welcome"
   end
 
+  def create
+    @administrator = Administrator.new(params[:administrator])
+    if @administrator.save
+      # Do success.
+    else
+      @title = "Welcome"
+      render 'first'
+    end
+  end
+
 end
