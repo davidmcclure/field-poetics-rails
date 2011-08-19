@@ -1,4 +1,9 @@
 FieldPoetics::Application.routes.draw do
+
+  resources :administrators
+
+  match '/welcome', :to => 'administrators#first'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
