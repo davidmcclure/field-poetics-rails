@@ -71,7 +71,10 @@ describe AdministratorsController do
         end.should change(Administrator, :count).by(1)
       end
 
-      it "should redirect to the 'Home' screen"
+      it "should redirect to the 'Home' screen" do
+        post :create, :administrator => @attributes
+        response.should redirect_to(root_path)
+      end
 
     end
 
