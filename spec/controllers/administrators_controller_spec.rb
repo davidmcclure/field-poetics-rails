@@ -61,14 +61,20 @@ describe AdministratorsController do
           :email => "david.mcclure@virginia.edu",
           :firstname => "David",
           :lastname => "McClure",
-          :is_superuser => 1
+          :is_superadmin => 1
         }
       end
 
-      it "should create a user" do
+      it "should create an administrator" do
         lambda do
           post :create, :administrator => @attributes
         end.should change(Administrator, :count).by(1)
+      end
+
+      it "should create an administrator that is a super administrator" do
+        post :create, :administrator => @attributes
+        @administrator = Administrator.first
+        @administrator.is_superadmin.should equal(true)
       end
 
       it "should redirect to the 'Home' screen" do

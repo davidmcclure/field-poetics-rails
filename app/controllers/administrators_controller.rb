@@ -13,7 +13,7 @@ class AdministratorsController < ApplicationController
       redirect_to root_path
     else
       @title = "Welcome"
-      render 'first'
+      render 'first', :layout => 'welcome'
     end
   end
 
