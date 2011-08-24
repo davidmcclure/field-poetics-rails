@@ -8,7 +8,6 @@ gem 'webrat', '0.7.1', :group => [:test]
 gem 'rspec-rails', '2.6.1', :group => [:development, :test]
 gem 'annotate', '2.4.0', :group => [:development]
 gem 'formtastic', '~> 1.2.3'
-gem 'devise'
 
 # Use unicorn as the web server
 # gem 'unicorn'

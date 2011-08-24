@@ -8,3 +8,58 @@ REQUESTING PAGE: POST /administrators with {"utf8"=>"\xE2\x9C\x93", "administrat
 REQUESTING PAGE: GET /welcome with {} and HTTP headers {}
 REQUESTING PAGE: POST /administrators with {"utf8"=>"\xE2\x9C\x93", "administrator"=>{"username"=>"davidmcclure", "password"=>"scholarslab", "password_confirmation"=>"scholarslab", "email"=>"david.mcclure@virginia.edu", "firstname"=>"David", "lastname"=>"McClure", "is_superadmin"=>"1"}, "commit"=>"Continue"} and HTTP headers {"HTTP_REFERER"=>"/welcome"}
 REQUESTING PAGE: GET http://www.example.com/ with {} and HTTP headers {"HTTP_REFERER"=>"/administrators"}
+REQUESTING PAGE: GET /welcome with {} and HTTP headers {}
+REQUESTING PAGE: POST /administrators with {"utf8"=>"\xE2\x9C\x93", "administrator"=>{"username"=>"", "password"=>"", "password_confirmation"=>"", "email"=>"", "firstname"=>"", "lastname"=>"", "is_superadmin"=>"1"}, "commit"=>"Continue"} and HTTP headers {"HTTP_REFERER"=>"/welcome"}
+REQUESTING PAGE: GET /welcome with {} and HTTP headers {}
+REQUESTING PAGE: POST /administrators with {"utf8"=>"\xE2\x9C\x93", "administrator"=>{"username"=>"davidmcclure", "password"=>"scholarslab", "password_confirmation"=>"scholarslab", "email"=>"david.mcclure@virginia.edu", "firstname"=>"David", "lastname"=>"McClure", "is_superadmin"=>"1"}, "commit"=>"Continue"} and HTTP headers {"HTTP_REFERER"=>"/welcome"}
+REQUESTING PAGE: GET http://www.example.com/ with {} and HTTP headers {"HTTP_REFERER"=>"/administrators"}
+REQUESTING PAGE: GET /welcome with {} and HTTP headers {}
+REQUESTING PAGE: POST /administrators with {"utf8"=>"\xE2\x9C\x93", "administrator"=>{"username"=>"", "password"=>"", "password_confirmation"=>"", "email"=>"", "firstname"=>"", "lastname"=>"", "is_superadmin"=>"1"}, "commit"=>"Continue"} and HTTP headers {"HTTP_REFERER"=>"/welcome"}
+REQUESTING PAGE: GET /welcome with {} and HTTP headers {}
+REQUESTING PAGE: POST /administrators with {"utf8"=>"\xE2\x9C\x93", "administrator"=>{"username"=>"davidmcclure", "password"=>"scholarslab", "password_confirmation"=>"scholarslab", "email"=>"david.mcclure@virginia.edu", "firstname"=>"David", "lastname"=>"McClure", "is_superadmin"=>"1"}, "commit"=>"Continue"} and HTTP headers {"HTTP_REFERER"=>"/welcome"}
+REQUESTING PAGE: GET http://www.example.com/ with {} and HTTP headers {"HTTP_REFERER"=>"/administrators"}
+REQUESTING PAGE: GET /welcome with {} and HTTP headers {}
+REQUESTING PAGE: POST /administrators with {"utf8"=>"\xE2\x9C\x93", "administrator"=>{"username"=>"", "password"=>"", "password_confirmation"=>"", "email"=>"", "firstname"=>"", "lastname"=>"", "is_superadmin"=>"1"}, "commit"=>"Continue"} and HTTP headers {"HTTP_REFERER"=>"/welcome"}
+REQUESTING PAGE: GET /welcome with {} and HTTP headers {}
+REQUESTING PAGE: POST /administrators with {"utf8"=>"\xE2\x9C\x93", "administrator"=>{"username"=>"davidmcclure", "password"=>"scholarslab", "password_confirmation"=>"scholarslab", "email"=>"david.mcclure@virginia.edu", "firstname"=>"David", "lastname"=>"McClure", "is_superadmin"=>"1"}, "commit"=>"Continue"} and HTTP headers {"HTTP_REFERER"=>"/welcome"}
+REQUESTING PAGE: GET http://www.example.com/ with {} and HTTP headers {"HTTP_REFERER"=>"/administrators"}
+REQUESTING PAGE: GET /welcome with {} and HTTP headers {}
+REQUESTING PAGE: POST /administrators with {"utf8"=>"\xE2\x9C\x93", "administrator"=>{"username"=>"", "password"=>"", "password_confirmation"=>"", "email"=>"", "firstname"=>"", "lastname"=>"", "is_superadmin"=>"1"}, "commit"=>"Continue"} and HTTP headers {"HTTP_REFERER"=>"/welcome"}
+REQUESTING PAGE: GET /welcome with {} and HTTP headers {}
+REQUESTING PAGE: POST /administrators with {"utf8"=>"\xE2\x9C\x93", "administrator"=>{"username"=>"davidmcclure", "password"=>"scholarslab", "password_confirmation"=>"scholarslab", "email"=>"david.mcclure@virginia.edu", "firstname"=>"David", "lastname"=>"McClure", "is_superadmin"=>"1"}, "commit"=>"Continue"} and HTTP headers {"HTTP_REFERER"=>"/welcome"}
+REQUESTING PAGE: GET http://www.example.com/ with {} and HTTP headers {"HTTP_REFERER"=>"/administrators"}
+REQUESTING PAGE: GET /welcome with {} and HTTP headers {}
+REQUESTING PAGE: POST /administrators with {"utf8"=>"\xE2\x9C\x93", "administrator"=>{"username"=>"", "password"=>"", "password_confirmation"=>"", "email"=>"", "firstname"=>"", "lastname"=>"", "is_superadmin"=>"1"}, "commit"=>"Continue"} and HTTP headers {"HTTP_REFERER"=>"/welcome"}
+REQUESTING PAGE: GET /welcome with {} and HTTP headers {}
+REQUESTING PAGE: POST /administrators with {"utf8"=>"\xE2\x9C\x93", "administrator"=>{"username"=>"davidmcclure", "password"=>"scholarslab", "password_confirmation"=>"scholarslab", "email"=>"david.mcclure@virginia.edu", "firstname"=>"David", "lastname"=>"McClure", "is_superadmin"=>"1"}, "commit"=>"Continue"} and HTTP headers {"HTTP_REFERER"=>"/welcome"}
+REQUESTING PAGE: GET http://www.example.com/ with {} and HTTP headers {"HTTP_REFERER"=>"/administrators"}
+REQUESTING PAGE: GET /welcome with {} and HTTP headers {}
+REQUESTING PAGE: POST /administrators with {"utf8"=>"\xE2\x9C\x93", "administrator"=>{"username"=>"", "password"=>"", "password_confirmation"=>"", "email"=>"", "firstname"=>"", "lastname"=>"", "is_superadmin"=>"1"}, "commit"=>"Continue"} and HTTP headers {"HTTP_REFERER"=>"/welcome"}
+REQUESTING PAGE: GET /welcome with {} and HTTP headers {}
+REQUESTING PAGE: POST /administrators with {"utf8"=>"\xE2\x9C\x93", "administrator"=>{"username"=>"davidmcclure", "password"=>"scholarslab", "password_confirmation"=>"scholarslab", "email"=>"david.mcclure@virginia.edu", "firstname"=>"David", "lastname"=>"McClure", "is_superadmin"=>"1"}, "commit"=>"Continue"} and HTTP headers {"HTTP_REFERER"=>"/welcome"}
+REQUESTING PAGE: GET http://www.example.com/ with {} and HTTP headers {"HTTP_REFERER"=>"/administrators"}
+REQUESTING PAGE: GET /welcome with {} and HTTP headers {}
+REQUESTING PAGE: POST /administrators with {"utf8"=>"\xE2\x9C\x93", "administrator"=>{"username"=>"", "password"=>"", "password_confirmation"=>"", "email"=>"", "firstname"=>"", "lastname"=>"", "is_superadmin"=>"1"}, "commit"=>"Continue"} and HTTP headers {"HTTP_REFERER"=>"/welcome"}
+REQUESTING PAGE: GET /welcome with {} and HTTP headers {}
+REQUESTING PAGE: POST /administrators with {"utf8"=>"\xE2\x9C\x93", "administrator"=>{"username"=>"davidmcclure", "password"=>"scholarslab", "password_confirmation"=>"scholarslab", "email"=>"david.mcclure@virginia.edu", "firstname"=>"David", "lastname"=>"McClure", "is_superadmin"=>"1"}, "commit"=>"Continue"} and HTTP headers {"HTTP_REFERER"=>"/welcome"}
+REQUESTING PAGE: GET http://www.example.com/ with {} and HTTP headers {"HTTP_REFERER"=>"/administrators"}
+REQUESTING PAGE: GET /welcome with {} and HTTP headers {}
+REQUESTING PAGE: POST /administrators with {"utf8"=>"\xE2\x9C\x93", "administrator"=>{"username"=>"", "password"=>"", "password_confirmation"=>"", "email"=>"", "firstname"=>"", "lastname"=>"", "is_superadmin"=>"1"}, "commit"=>"Continue"} and HTTP headers {"HTTP_REFERER"=>"/welcome"}
+REQUESTING PAGE: GET /welcome with {} and HTTP headers {}
+REQUESTING PAGE: POST /administrators with {"utf8"=>"\xE2\x9C\x93", "administrator"=>{"username"=>"davidmcclure", "password"=>"scholarslab", "password_confirmation"=>"scholarslab", "email"=>"david.mcclure@virginia.edu", "firstname"=>"David", "lastname"=>"McClure", "is_superadmin"=>"1"}, "commit"=>"Continue"} and HTTP headers {"HTTP_REFERER"=>"/welcome"}
+REQUESTING PAGE: GET http://www.example.com/ with {} and HTTP headers {"HTTP_REFERER"=>"/administrators"}
+REQUESTING PAGE: GET /welcome with {} and HTTP headers {}
+REQUESTING PAGE: POST /administrators with {"utf8"=>"\xE2\x9C\x93", "administrator"=>{"username"=>"", "password"=>"", "password_confirmation"=>"", "email"=>"", "firstname"=>"", "lastname"=>"", "is_superadmin"=>"1"}, "commit"=>"Continue"} and HTTP headers {"HTTP_REFERER"=>"/welcome"}
+REQUESTING PAGE: GET /welcome with {} and HTTP headers {}
+REQUESTING PAGE: POST /administrators with {"utf8"=>"\xE2\x9C\x93", "administrator"=>{"username"=>"davidmcclure", "password"=>"scholarslab", "password_confirmation"=>"scholarslab", "email"=>"david.mcclure@virginia.edu", "firstname"=>"David", "lastname"=>"McClure", "is_superadmin"=>"1"}, "commit"=>"Continue"} and HTTP headers {"HTTP_REFERER"=>"/welcome"}
+REQUESTING PAGE: GET http://www.example.com/ with {} and HTTP headers {"HTTP_REFERER"=>"/administrators"}
+REQUESTING PAGE: GET /welcome with {} and HTTP headers {}
+REQUESTING PAGE: POST /administrators with {"utf8"=>"\xE2\x9C\x93", "administrator"=>{"username"=>"", "password"=>"", "password_confirmation"=>"", "email"=>"", "firstname"=>"", "lastname"=>"", "is_superadmin"=>"1"}, "commit"=>"Continue"} and HTTP headers {"HTTP_REFERER"=>"/welcome"}
+REQUESTING PAGE: GET /welcome with {} and HTTP headers {}
+REQUESTING PAGE: POST /administrators with {"utf8"=>"\xE2\x9C\x93", "administrator"=>{"username"=>"davidmcclure", "password"=>"scholarslab", "password_confirmation"=>"scholarslab", "email"=>"david.mcclure@virginia.edu", "firstname"=>"David", "lastname"=>"McClure", "is_superadmin"=>"1"}, "commit"=>"Continue"} and HTTP headers {"HTTP_REFERER"=>"/welcome"}
+REQUESTING PAGE: GET http://www.example.com/ with {} and HTTP headers {"HTTP_REFERER"=>"/administrators"}
+REQUESTING PAGE: GET /welcome with {} and HTTP headers {}
+REQUESTING PAGE: POST /administrators with {"utf8"=>"\xE2\x9C\x93", "administrator"=>{"username"=>"", "password"=>"", "password_confirmation"=>"", "email"=>"", "firstname"=>"", "lastname"=>"", "is_superadmin"=>"1"}, "commit"=>"Continue"} and HTTP headers {"HTTP_REFERER"=>"/welcome"}
+REQUESTING PAGE: GET /welcome with {} and HTTP headers {}
+REQUESTING PAGE: POST /administrators with {"utf8"=>"\xE2\x9C\x93", "administrator"=>{"username"=>"davidmcclure", "password"=>"scholarslab", "password_confirmation"=>"scholarslab", "email"=>"david.mcclure@virginia.edu", "firstname"=>"David", "lastname"=>"McClure", "is_superadmin"=>"1"}, "commit"=>"Continue"} and HTTP headers {"HTTP_REFERER"=>"/welcome"}
+REQUESTING PAGE: GET http://www.example.com/ with {} and HTTP headers {"HTTP_REFERER"=>"/administrators"}

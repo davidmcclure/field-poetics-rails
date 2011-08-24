@@ -1,7 +1,12 @@
 FieldPoetics::Application.routes.draw do
 
   resources :administrators
+  resources :sessions, :only => [:new, :create, :destroy]
+
   match '/welcome', :to => 'administrators#first'
+  match '/signin',  :to => 'sessions#new'
+  match '/signout', :to => 'sessions#destroy'
+  
 
   root :to => 'main#index'
 

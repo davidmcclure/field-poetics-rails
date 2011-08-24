@@ -1,0 +1,9 @@
+<%= semantic_form_for 'administrator', :url => sessions_path do |form| %>
+  <%= form.inputs do %>
+    <%= form.input :username, :label => "Username", :required => true %>
+    <%= form.input :password, :as => :password, :label => "Password", :required => true %>
+  <% end %>
+  <%= form.buttons do %>
+    <%= form.commit_button :button_html => { :value => "Sign In" } %>
+  <% end %>
+<% end %>
