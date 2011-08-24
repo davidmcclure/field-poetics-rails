@@ -2,16 +2,4 @@
 <p>Welcome! To get started, enter information below to create a system-wide administrator. This initial account
 will have the authority to create login credentials for other researchers and control their access privileges.</p>
 
-<%= semantic_form_for @administrator do |form| %>
-  <%= form.inputs do %>
-    <%= form.input :username, :label => "Username", :required => true %>
-    <%= form.input :password, :as => :password, :label => "Password", :required => true %>
-    <%= form.input :password_confirmation, :as => :password, :label => "Confirm Password", :required => true %>
-    <%= form.input :email, :label => "Email", :required => true %>
-    <%= form.input :firstname, :label => "First Name", :required => true %>
-    <%= form.input :lastname, :label => "Last Name", :required => true %>
-  <% end %>
-  <%= form.buttons do %>
-    <%= form.commit_button :button_html => { :value => "Continue" } %>
-  <% end %>
-<% end %>
+<%= render 'first_administrator_form' %>
