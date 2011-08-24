@@ -22,7 +22,7 @@ form.formtastic fieldset > ol > li.email input,
 form.formtastic fieldset > ol > li.url input,
 form.formtastic fieldset > ol > li.phone input,
 form.formtastic fieldset > ol > li.search input { 
-  width: 20%;
+  width: 260px;
   display: block;
   clear: both;
 }

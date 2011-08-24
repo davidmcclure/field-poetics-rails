@@ -6,6 +6,7 @@
     <%= form.input :email, :label => "Email", :required => true %>
     <%= form.input :firstname, :label => "First Name", :required => true %>
     <%= form.input :lastname, :label => "Last Name", :required => true %>
+    <%= form.input :is_superuser, :as => :hidden, :value => 1 %>
   <% end %>
   <%= form.buttons do %>
     <%= form.commit_button :button_html => { :value => "Continue" } %>

@@ -3,6 +3,7 @@ class AdministratorsController < ApplicationController
   def first
     @administrator = Administrator.new
     @title = "Welcome"
+    render :layout => 'welcome'
   end
 
   def create

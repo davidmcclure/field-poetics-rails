@@ -4,3 +4,12 @@ body {
   font-family: Rosario;
   padding: 0 0 0 1em;
 }
+
+nav ul {
+  padding-left: 0.1em;
+}
+
+nav li {
+  display: inline;
+  margin-right: 1em;
+}
