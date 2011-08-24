@@ -1,8 +1,9 @@
-FieldPoetics::Application.routes.draw do
+FieldPoetics::Application.routes.draw do |map|
 
   resources :administrators
-
   match '/welcome', :to => 'administrators#first'
+
+  map.root :controller => 'main'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

@@ -28,7 +28,8 @@ describe AdministratorsController do
           :password_confirmation => "",
           :email => "",
           :firstname => "",
-          :lastname => ""
+          :lastname => "",
+          :is_superuser => 1
         }
       end
 
@@ -47,6 +48,30 @@ describe AdministratorsController do
         post :create, :administrator => @attributes
         response.should render_template('first')
       end
+
+    end
+
+    describe "success" do
+
+      before(:each) do
+        @attributes = {
+          :username => "davidmcclure",
+          :password => "scholarslab",
+          :password_confirmation => "scholarslab",
+          :email => "david.mcclure@virginia.edu",
+          :firstname => "David",
+          :lastname => "McClure",
+          :is_superuser => 1
+        }
+      end
+
+      it "should create a user" do
+        lambda do
+          post :create, :administrator => @attributes
+        end.should change(Administrator, :count).by(1)
+      end
+
+      it "should redirect to the 'Home' screen"
 
     end
 
