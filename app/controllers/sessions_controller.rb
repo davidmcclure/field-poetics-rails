@@ -6,11 +6,13 @@ class SessionsController < ApplicationController
   end
 
   def create
-    administrator = Administrator.authenticate(params[:session][:username], params[:session][:password])
+    administrator = Administrator.authenticate(params[:administrator][:username], params[:administrator][:password])
     if administrator.nil?
-      # do errors
+      @title = "Sign In"
+      render 'new', :layout => 'welcome'
     else
-      # sign in and redirect to home
+      sign_in administrator
+      redirect_to root_path
     end
   end
 
