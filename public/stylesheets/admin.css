@@ -1,10 +1,6 @@
 /* General */
 
-body {
-  font-family: Georgia;
-}
-
-a {
+a, a:hover {
   text-decoration: none;
 }
 
@@ -20,6 +16,7 @@ div.flash {
   margin: auto;
 }
 
+
 /* Top matter */
 
 #top-matter {
@@ -27,14 +24,17 @@ div.flash {
   font-family: 'IM Fell English';
 }
 
+
+/* Logout */
+
 #current-administrator {
-  font-family: 'IM Fell English';
   position: absolute;
   right: 1.5em;
+  font-size: 13px;
 }
 
-#logout {
-  color: #007eff;
+#current-administrator form, #current-administrator form div {
+  display: inline;
 }
 
 
@@ -44,20 +44,20 @@ div.flash {
   font-family: 'IM Fell English';
   font-size: 5.2em;
   margin: 0.2em 0 0 0;
+  color: #000;
 }
 
 #subtitle {
   font-size: 1.1em;
-  margin-top: -0.7em;
+  margin-top: -0.4em;
 }
 
 
 /* Menu */
 
 header {
-  /* border-top: 1px solid #b8b8b8;*/
-  /* border-bottom: 1px solid #b8b8b8;*/
-  /* padding: 0.4em 0 0.4em 0;*/
+  border-bottom: 1px solid #b8b8b8;
+  padding: 0.6em 0 0.7em 0;
 }
 
 nav {

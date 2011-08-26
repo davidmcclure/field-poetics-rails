@@ -1,5 +1,5 @@
 <div id="current-administrator">
-  <span><%= current_administrator.username %></span>
+  <span class="current-admin"><%= current_administrator.username %></span>
   <span> | </span>
-  <span><%= button_to "logout", signout_path , :id => 'logout' %></span>
+  <span><%= button_to "logout", signout_path , :id => 'logout', :class => 'btn' %></span>
 </div>
