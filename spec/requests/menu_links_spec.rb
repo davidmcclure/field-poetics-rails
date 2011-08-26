@@ -38,12 +38,12 @@ describe "Menu links" do
 
     it "should show the administrator's username" do
       visit root_path
-      response.should have_selector('div#current_administrator span', :content => @administrator.username)
+      response.should have_selector('div#current-administrator span', :content => @administrator.username)
     end
 
     it "should display the logout link" do
       visit root_path
-      response.should have_selector('a#logout', :content => 'Logout', :href => signout_path)
+      response.should have_selector('a#logout', :content => 'log out', :href => signout_path)
     end
 
   end

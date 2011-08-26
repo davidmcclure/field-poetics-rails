@@ -1,0 +1,66 @@
+/* General */
+
+body {
+  font-family: Georgia;
+}
+
+div.flash {
+  margin: 1em 1em 1em 0.5em;
+}
+
+
+/* Layout */
+
+#container {
+  width: 960px;
+  margin: auto;
+}
+
+/* Top matter */
+
+#top-matter {
+  text-align: center;
+  font-family: 'IM Fell English';
+}
+
+#current-administrator {
+}
+
+
+/* Title */
+
+#title {
+  font-family: 'IM Fell English';
+  font-size: 5.2em;
+  margin: 0.2em 0 0 0;
+}
+
+#subtitle {
+  font-size: 1.1em;
+  margin-top: -0.7em;
+}
+
+
+/* Menu */
+
+nav {
+  font-size: 1.6em;
+}
+
+nav ul {
+  margin: 0.6em 0 0 0;
+}
+
+nav li {
+  display: inline;
+  margin-right: 1.3em;
+}
+
+nav a {
+  text-decoration: none;
+  color: #272727;
+}
+
+nav a:hover, nav a.active {
+  color: #007eff;
+}

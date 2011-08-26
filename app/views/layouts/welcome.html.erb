@@ -2,24 +2,24 @@
 <html>
 <head>
   <title><%= title %></title>
-  <%= google_fonts(["Rosario", "IM Fell English"]) %>
-  <%= stylesheet_link_tag 'dev', :media => 'screen' %>
-  <%= stylesheet_link_tag 'formtastic/formtastic', :media => 'screen' %>
-  <%= stylesheet_link_tag 'formtastic/formtastic_changes', :media => 'screen' %>
-  <%= csrf_meta_tag %>
+  <%= render 'layouts/css_js' %>
 </head>
 <body>
 
-  <h1>Field Poetics</h1>
+  <div id="container">
 
-  <section>
-    <% flash.each do |key, value| %>
-      <div class="flash <%= key %>"><%= value %></div>
-    <% end %>
-    <%= yield %>
-  </section>
+    <div id="top-matter">
+      <%= render 'layouts/title' %>
+    </div>
 
-  <%= debug(params) if Rails.env.development? %>
+    <section>
+      <% flash.each do |key, value| %>
+        <div class="flash <%= key %>"><%= value %></div>
+      <% end %>
+      <%= yield %>
+    </section>
+
+  </div>
 
 </body>
 </html>
