@@ -6,8 +6,11 @@ class SessionsController < ApplicationController
   end
 
   def create
-    administrator = Administrator.authenticate(params[:administrator][:username], params[:administrator][:password])
+    administrator = Administrator.authenticate(
+      params[:administrator][:username],
+      params[:administrator][:password])
     if administrator.nil?
+      flash.now[:error] = "Invalid combination."
       @title = "Sign In"
       render 'new', :layout => 'welcome'
     else
@@ -17,6 +20,8 @@ class SessionsController < ApplicationController
   end
 
   def destroy
+    sign_out
+    redirect_to root_path
   end
 
 end

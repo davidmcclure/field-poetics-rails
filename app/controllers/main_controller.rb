@@ -1,6 +1,6 @@
 class MainController < ApplicationController
 
-  # before_filter :authenticate
+  before_filter :authenticate
 
   def index
     @title = 'Home'
@@ -8,12 +8,11 @@ class MainController < ApplicationController
 
   private
 
-    def is_administrator
+    def authenticate
       if Administrator.count == 0
-        # redirect to first admin signup
+        redirect_to welcome_path
       else
-        @administrator = Administrator.find(params[:id])
-        # redirect to login page
+        deny_access unless signed_in?
       end
     end
 

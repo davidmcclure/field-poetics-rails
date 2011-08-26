@@ -13,3 +13,7 @@ nav li {
   display: inline;
   margin-right: 1em;
 }
+
+div.flash {
+  margin: 1em 1em 1em 0.5em;
+}

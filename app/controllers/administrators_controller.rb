@@ -9,7 +9,7 @@ class AdministratorsController < ApplicationController
   def create
     @administrator = Administrator.new(params[:administrator])
     if @administrator.save
-      # login in
+      sign_in @administrator
       redirect_to root_path
     else
       @title = "Welcome"

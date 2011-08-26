@@ -68,6 +68,11 @@ class Administrator < ActiveRecord::Base
     end
   end
 
+  def self.authenticate_with_salt(id, cookie_salt)
+    administrator = find_by_id(id)
+    (administrator && administrator.salt == cookie_salt)? administrator : nil
+  end
+
   # ** Row methods. ** #
 
   # Check to see if the admin's password matches the submitted password.

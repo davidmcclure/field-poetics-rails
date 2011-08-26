@@ -43,4 +43,37 @@ describe "Administrators" do
 
   end
 
+  describe "administrator login" do
+
+    describe "failure" do
+
+      it "should not log in an administrator without valid credentials" do
+        @administrator = Factory(:administrator)
+        visit signin_path
+        fill_in "Username", :with => 'invalid'
+        fill_in "Password", :with => 'invalid'
+        click_button
+        response.should render_template('/new')
+        response.should have_selector('div.flash', :count => 1, :content => 'Invalid combination.')
+        controller.should_not be_signed_in
+      end
+
+    end
+
+    describe "success" do
+
+      it "should log in an administrator with valid credentials" do
+        @administrator = Factory(:administrator)
+        visit signin_path
+        fill_in "Username", :with => @administrator.username
+        fill_in "Password", :with => @administrator.password
+        click_button
+        response.should render_template('/')
+        controller.should be_signed_in
+      end
+
+    end
+
+  end
+
 end

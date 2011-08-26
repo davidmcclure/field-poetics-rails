@@ -77,7 +77,12 @@ describe AdministratorsController do
         @administrator.is_superadmin.should equal(true)
       end
 
-      it "should automatically log the new administrator in"
+      it "should automatically log the new administrator in" do
+        post :create, :administrator => @attributes
+        @administrator = Administrator.first
+        controller.current_administrator.should == @administrator
+        controller.should be_signed_in
+      end
 
       it "should redirect to the 'Home' screen" do
         post :create, :administrator => @attributes
