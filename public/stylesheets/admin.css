@@ -86,3 +86,20 @@ nav a {
 nav a:hover, nav a.active {
   color: #007eff;
 }
+
+/* Welcome */
+
+fieldset#first-admin {
+  margin-top: 0;
+}
+
+.actions {
+  background: none;
+  margin-top: 18px;
+  margin-bottom: 18px;
+  padding: 5px 20px 18px 150px;
+  border-top: none;
+  -webkit-border-radius: 0 0 3px 3px;
+  -moz-border-radius: 0 0 3px 3px;
+  border-radius: 0 0 3px 3px;
+}

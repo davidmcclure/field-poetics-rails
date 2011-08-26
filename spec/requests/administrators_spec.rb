@@ -11,10 +11,10 @@ describe "Administrators" do
           visit welcome_path
           fill_in "Username", :with => ""
           fill_in "Password", :with => ""
-          fill_in "Confirm Password", :with => ""
+          fill_in "Confirm", :with => ""
           fill_in "Email", :with => ""
-          fill_in "First Name", :with => ""
-          fill_in "Last Name", :with => ""
+          fill_in "First name", :with => ""
+          fill_in "Last name", :with => ""
           click_button
           response.should render_template('/welcome')
           response.should have_selector('p.inline-errors', :count => 5)
@@ -30,10 +30,10 @@ describe "Administrators" do
           visit welcome_path
           fill_in "Username", :with => "davidmcclure"
           fill_in "Password", :with => "scholarslab"
-          fill_in "Confirm Password", :with => "scholarslab"
+          fill_in "Confirm", :with => "scholarslab"
           fill_in "Email", :with => "david.mcclure@virginia.edu"
-          fill_in "First Name", :with => "David"
-          fill_in "Last Name", :with => "McClure"
+          fill_in "First name", :with => "David"
+          fill_in "Last name", :with => "McClure"
           click_button
           response.should render_template('/')
         end.should change(Administrator, :count).by(1)
