@@ -43,7 +43,7 @@ describe "Menu links" do
 
     it "should display the logout link" do
       visit root_path
-      response.should have_selector('a#logout', :content => 'log out', :href => signout_path)
+      response.should have_selector('a#logout', :content => 'logout', :href => signout_path)
     end
 
   end
