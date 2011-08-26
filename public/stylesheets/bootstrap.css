@@ -514,6 +514,8 @@ h6 small {
 }
 h1 {
   margin-bottom: 18px;
+  font-size: 30px;
+  line-height: 36px;
 }
 h1 small {
   font-size: 18px;

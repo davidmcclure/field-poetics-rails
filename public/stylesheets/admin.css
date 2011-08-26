@@ -8,6 +8,10 @@ div.flash {
   margin: 1em 1em 1em 0.5em;
 }
 
+.container-fluid {
+  margin: 2em 0 0 0;
+}
+
 
 /* Layout */
 
@@ -42,21 +46,22 @@ div.flash {
 
 #title {
   font-family: 'IM Fell English';
-  font-size: 5.2em;
+  font-size: 81px;
   margin: 0.2em 0 0 0;
   color: #000;
 }
 
 #subtitle {
-  font-size: 1.1em;
-  margin-top: -0.4em;
+  font-size: 17px;
+  margin-top: -0.6em;
+  color: #5e5e5e;
 }
 
 
 /* Menu */
 
 header {
-  border-bottom: 1px solid #b8b8b8;
+  border-bottom: 1px solid #ddd;
   padding: 0.6em 0 0.7em 0;
 }
 

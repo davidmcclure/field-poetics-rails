@@ -41,7 +41,7 @@ describe "Menu links" do
       response.should have_selector('div#current-administrator span', :content => @administrator.username)
     end
 
-    it "should display the logout link" do
+    it "should display the logout button" do
       visit root_path
       response.should have_selector('a#logout', :content => 'logout', :href => signout_path)
     end
