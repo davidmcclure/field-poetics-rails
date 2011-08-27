@@ -30,4 +30,15 @@ RSpec.configure do |config|
     controller.sign_in(administrator)
   end
 
+  def test_first_administrator_invalid_credentials
+    visit welcome_path
+    fill_in "administrator_username", :with => ""
+    fill_in "administrator_password", :with => ""
+    fill_in "administrator_password_confirmation", :with => ""
+    fill_in "administrator_email", :with => ""
+    fill_in "administrator_firstname", :with => ""
+    fill_in "administrator_lastname", :with => ""
+    click_button
+  end
+
 end

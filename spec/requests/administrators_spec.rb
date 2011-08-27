@@ -8,17 +8,18 @@ describe "Administrators" do
 
       it "should not create a new administrator" do
         lambda do
-          visit welcome_path
-          fill_in "Username", :with => ""
-          fill_in "Password", :with => ""
-          fill_in "Confirm", :with => ""
-          fill_in "Email", :with => ""
-          fill_in "First name", :with => ""
-          fill_in "Last name", :with => ""
-          click_button
-          response.should render_template('/welcome')
-          response.should have_selector('p.inline-errors', :count => 5)
+          test_first_administrator_invalid_credentials
         end.should_not change(Administrator, :count)
+      end
+
+      it "should re-render the welcome template" do
+        test_first_administrator_invalid_credentials
+        response.should render_template('/welcome')
+      end
+
+      it "should display error messages" do
+        test_first_administrator_invalid_credentials
+        response.should have_selector('p.inline-errors', :count => 5)
       end
 
     end

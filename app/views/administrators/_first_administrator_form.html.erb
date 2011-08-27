@@ -1,37 +1,37 @@
 <%= form_for(@administrator) do |f| %>
   <fieldset id="first-admin">
     <div class="clearfix">
-      <%= f.label :username %>
+      <%= f.label :username, "Username:" %>
       <div class="input">
         <%= f.text_field :username %>
       </div>
     </div>
     <div class="clearfix">
-      <%= f.label :password %>
+      <%= f.label :password, "Password:" %>
       <div class="input">
         <%= f.password_field :password %>
       </div>
     </div>
     <div class="clearfix">
-      <%= f.label "Confirm" %>
+      <%= f.label :password_confirmation, "Confirm:" %>
       <div class="input">
         <%= f.password_field :password_confirmation %>
       </div>
     </div>
     <div class="clearfix">
-      <%= f.label :email %>
+      <%= f.label :email, "Email:" %>
       <div class="input">
         <%= f.text_field :email %>
       </div>
     </div>
     <div class="clearfix">
-      <%= f.label "First name" %>
+      <%= f.label :firstname, "First Name:" %>
       <div class="input">
         <%= f.text_field :firstname %>
       </div>
     </div>
     <div class="clearfix">
-      <%= f.label "Last name" %>
+      <%= f.label :lastname, "Last Name:" %>
       <div class="input">
         <%= f.text_field :lastname %>
       </div>
