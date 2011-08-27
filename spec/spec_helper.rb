@@ -41,4 +41,29 @@ RSpec.configure do |config|
     click_button
   end
 
+  def test_first_administrator_valid_credentials
+    visit welcome_path
+    fill_in "administrator_username", :with => "davidmcclure"
+    fill_in "administrator_password", :with => "scholarslab"
+    fill_in "administrator_password_confirmation", :with => "scholarslab"
+    fill_in "administrator_email", :with => "david.mcclure@virginia.edu"
+    fill_in "administrator_firstname", :with => "David"
+    fill_in "administrator_lastname", :with => "McClure"
+    click_button
+  end
+
+  def test_invalid_login
+    visit signin_path
+    fill_in "Username", :with => 'invalid'
+    fill_in "Password", :with => 'invalid'
+    click_button
+  end
+
+  def test_valid_login(administrator)
+    visit signin_path
+    fill_in "Username", :with => administrator.username
+    fill_in "Password", :with => administrator.password
+    click_button
+  end
+
 end
